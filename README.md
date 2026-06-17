@@ -12,19 +12,31 @@
 - 듣기 속도 5단계 · 여성/남성/아이 음성 선택 · 즐겨찾기
 - PWA 지원 (홈 화면 설치 · 오프라인 캐시)
 
-## 배포 / 실행
+## 배포
 
-이 폴더 자체가 배포 가능한 정적 사이트입니다. 진입 파일은 `index.html`입니다.
+이 폴더 자체가 배포 가능한 정적 사이트입니다. 진입 파일은 `index.html`이라 별도 설정 없이 루트(`/`)에서 바로 열립니다.
 
-- **정적 호스팅(권장):** 이 폴더의 파일을 Netlify Drop(app.netlify.com/drop)에 드래그하거나 GitHub Pages 등으로 올리면 됩니다.
-- **로컬 미리보기:**
+### Netlify (가장 쉬움, 계정 불필요)
+
+1. [app.netlify.com/drop](https://app.netlify.com/drop) 접속
+2. 이 폴더(`WordChange`)를 페이지 위로 드래그 & 드롭
+3. 생성된 `https://<랜덤이름>.netlify.app` 주소로 접속
+4. 주소를 유지하려면 "Claim this site"로 무료 가입
+5. 갱신 시: 같은 사이트의 Deploys에 폴더를 다시 드롭
+
+### GitHub Pages
+
+저장소에 푸시한 뒤, GitHub → Settings → Pages → Branch를 `main` / `/(root)`로 지정하면 `https://<사용자>.github.io/WordChange/` 에서 열립니다.
+
+### 로컬 미리보기
 
 ```bash
 python3 -m http.server 8000
 # 브라우저에서 http://localhost:8000/ 접속
 ```
 
-> PWA(서비스 워커·설치) 기능은 `file://` 직접 열기에서는 제한될 수 있으므로 호스팅 또는 로컬 서버에서 실행하세요.
+> 모바일 설치: 아이폰(Safari) 공유 → "홈 화면에 추가", 안드로이드(Chrome) 메뉴(⋮) → "앱 설치".
+> PWA(서비스 워커·설치)는 `file://` 직접 열기에서는 제한될 수 있으니 호스팅 또는 로컬 서버에서 실행하세요.
 
 ## 구성 파일
 
