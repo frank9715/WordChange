@@ -1,8 +1,8 @@
 {
   "name": "영어 문장 연습기",
   "short_name": "영어연습",
-  "description": "주제별로 자연스러운 영어 문장을 만들고 단어를 바꿔 가며 연습하는 앱",
-  "start_url": "./english-practice.html",
+  "description": "영어 문장 연습, 상황별 회화, 회화 표현, 단어 뜻까지 한 번에 익히는 학습 앱",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

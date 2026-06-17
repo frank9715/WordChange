@@ -1,7 +1,8 @@
 /* 오프라인 사용을 위한 서비스 워커 */
-const CACHE = "english-practice-v1";
+const CACHE = "english-practice-v2";
 const ASSETS = [
-  "./english-practice.html",
+  "./",
+  "./index.html",
   "./manifest.webmanifest",
   "./icon-192.png",
   "./icon-512.png"
@@ -22,6 +23,6 @@ self.addEventListener("fetch", e => {
       const copy = res.clone();
       caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {});
       return res;
-    }).catch(() => caches.match("./english-practice.html")))
+    }).catch(() => caches.match("./index.html")))
   );
 });
